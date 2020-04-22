@@ -1,0 +1,29 @@
+---
+openapi: "3.0.1"
+info:
+  title: "Vert.x APIs"
+  description: "This specification was generated from a Vert.x Web Router."
+servers: []
+tags: []
+paths:
+  /management/api/v1/syncsession:
+    post:
+      parameters: []
+  /management/api/v1/import/queue:
+    get:
+      parameters: []
+  /management/api/v1/cluster/storeIds:
+    get:
+      parameters: []
+  /management/api/v1/seed/{storeId}/lock:
+    post:
+      parameters:
+      - name: "storeId"
+        required: true
+        allowEmptyValue: false
+  /management/api/v1/seed/{storeId}/unlock:
+    post:
+      parameters:
+      - name: "storeId"
+        required: true
+        allowEmptyValue: false
