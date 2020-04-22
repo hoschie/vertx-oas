@@ -63,11 +63,11 @@ class OpenApiServiceImpl : OpenApiService {
                             }
                 }
 
-                (route as RouteImpl).javaClass.getDeclaredField("methods").apply {
+                (route as RouteImpl).javaClass.getDeclaredMethod("methods").apply {
                     isAccessible = true
 
                     @Suppress("UNCHECKED_CAST")
-                    val methods = get(route) as Collection<HttpMethod>
+                    val methods = invoke(route) as Collection<HttpMethod>
 
                     for (method in methods) {
                         when (method) {
